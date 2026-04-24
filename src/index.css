@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-canvas: #F9FAFB;
+  --color-navy: #1A277A;
+  --color-mint: #71FCAC;
+  --color-terminal: #0B112B;
+}
+
+:root {
+  --bg: #F9FAFB;
+  --navy: #1A277A;
+  --mint: #71FCAC;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--navy);
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .navy-glass {
+    background: rgba(26, 39, 122, 0.8);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .terminal-window {
+    background: #0B112B;
+    border: 1px solid rgba(113, 252, 172, 0.3);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Hide scrollbar but keep functionality */
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
